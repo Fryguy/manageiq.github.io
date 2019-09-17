@@ -5,7 +5,7 @@ env:
   - BUNDLE_PATH=${TRAVIS_BUILD_DIR}/vendor/bundle
 cache:
   directories:
-  - $BUNDLE_PATH
+  - ${TRAVIS_BUILD_DIR}/vendor/bundle
 before_install:
 - git clone https://github.com/ManageIQ/manageiq.org ${TRAVIS_BUILD_DIR}/manageiq.org
 - cd ${TRAVIS_BUILD_DIR}/manageiq.org
