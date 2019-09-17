@@ -1,7 +1,11 @@
 language: ruby
 rvm: 2.5.6
+env:
+  global:
+  - BUNDLE_PATH=${TRAVIS_BUILD_DIR}/vendor/bundle
 cache:
-  bundler: true
+  directories:
+  - $BUNDLE_PATH
 before_install:
 - git clone https://github.com/ManageIQ/manageiq.org ${TRAVIS_BUILD_DIR}/manageiq.org
 - cd ${TRAVIS_BUILD_DIR}/manageiq.org
